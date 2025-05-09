@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:wght@400;500;600;700&display=swap');
+
+/* Add any global styles below */
+h4 {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: normal;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+html {
+  font-family: 'Teachers', sans-serif;
+  background-color: #191b21;
+  color: #e8e8e8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  color: #ffcb3e;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+}
+
+input::placeholder {
+  color: #ffcb3e;
+  opacity: 0.5;
+}
+
+.mainContainer {
+  position: relative;
+  height: 100%;
+}
+
+.saveButton {
+  position: absolute;
+  bottom: 0;
+}
+
+.navPosition {
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* .navigationPosition {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */

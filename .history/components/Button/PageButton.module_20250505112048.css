@@ -1,0 +1,10 @@
+.pageButton {
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #fff9ec;
+
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}

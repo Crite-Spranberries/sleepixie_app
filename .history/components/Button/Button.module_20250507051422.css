@@ -1,0 +1,117 @@
+.pageButton {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #fff9ec;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 19px 0 19px 13px;
+  border: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 13px;
+}
+
+.arrowIcon {
+  flex-shrink: 0;
+}
+
+.pageButton span {
+  text-align: left;
+}
+
+.buttonContainer {
+  width: 100%;
+  padding: 0;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.twoButtonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+}
+
+.twoButtonTop {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #fff9ec;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px 10px 0px 0px;
+  padding: 19px 0 19px 13px;
+  border: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
+
+.twoButtonBottom {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #fff9ec;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 0px 0px 10px 10px;
+  padding: 19px 0 19px 13px;
+  border: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
+
+.goalSettingHeader {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 69px 0 0 16px;
+  gap: 84px;
+}
+
+.searchContainer {
+  width: 339px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  border-radius: 53px;
+  border: 1px solid #ffcb3e;
+  background: #292e37;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+.calendarTitle {
+  color: #fff9ec;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  height: 65px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.calendarTitleContainer {
+  border-bottom: 1px solid #fff9ec;
+}
+
+.month {
+  color: #ffcb3e;
+}
+
+.calendarContainer {
+  width: 370px;
+  height: 526px;
+  background-color: #353535;
+  border-radius: 10px 10px 0px 0px;
+}

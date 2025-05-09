@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:wght@400;500;600;700&display=swap');
+
+/* Add any global styles below */
+h4 {
+  font-family: 'Teachers', sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  font-family: 'Teachers', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: normal;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+html {
+  background-color: #191b21;
+  color: #e8e8e8;
+  margin: 0;
+  padding: 0;
+}

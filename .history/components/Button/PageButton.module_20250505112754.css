@@ -1,0 +1,22 @@
+.pageButton {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #fff9ec;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  display: flex;
+  width: 345px;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
