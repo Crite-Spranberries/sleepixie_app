@@ -16,14 +16,7 @@ import styles from "@/styles/SupplementPage.module.css";
 export default function GoalSetting() {
   return (
     <div className={styles.mobileContainer}>
-      <div
-        className="mainContainer"
-        style={{
-          overflowY: "auto",
-          paddingBottom: 100,
-          height: "100%",
-        }}
-      >
+      <div className="mainContainer">
         <div className="settingHeader">
           <HeaderComponent pageName="Goal Setting" pageLink="/index" />
         </div>
@@ -51,16 +44,16 @@ export default function GoalSetting() {
             />
           </div>
         </div>
+        <div className="navigationBarGlobal">
+          <NavigationBar
+            pageName="Sleep"
+            pageName2="Achievement"
+            pageName3="Profile"
+          />
+        </div>
         <div className="calendar">
           <Calendar month={2} year={2025} highlightDay={3} />
         </div>
-      </div>
-      <div className={styles.navigationBarGlobal}>
-        <NavigationBar
-          pageName="Sleep"
-          pageName2="Achievement"
-          pageName3="Profile"
-        />
       </div>
     </div>
   );

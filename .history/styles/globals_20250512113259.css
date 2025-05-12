@@ -51,7 +51,7 @@ input::placeholder {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  content-align: center;
 }
 
 .navigationBarGlobal {

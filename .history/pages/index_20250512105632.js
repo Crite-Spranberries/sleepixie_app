@@ -18,11 +18,7 @@ export default function GoalSetting() {
     <div className={styles.mobileContainer}>
       <div
         className="mainContainer"
-        style={{
-          overflowY: "auto",
-          paddingBottom: 100,
-          height: "100%",
-        }}
+        style={{ overflowY: "auto", paddingBottom: 100, height: "100%" }}
       >
         <div className="settingHeader">
           <HeaderComponent pageName="Goal Setting" pageLink="/index" />
@@ -55,7 +51,7 @@ export default function GoalSetting() {
           <Calendar month={2} year={2025} highlightDay={3} />
         </div>
       </div>
-      <div className={styles.navigationBarGlobal}>
+      <div className="navigationBarGlobal">
         <NavigationBar
           pageName="Sleep"
           pageName2="Achievement"

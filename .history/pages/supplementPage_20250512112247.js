@@ -14,18 +14,11 @@ export default function SupplementPage() {
 
   return (
     <div className={styles.mobileContainer}>
-      <div
-        className="mainContainer"
-        style={{
-          overflowY: "auto",
-          paddingBottom: 100,
-          height: "100%",
-        }}
-      >
-        <div className="settingHeader">
+      <div className={styles.mainContainer}>
+        <div className={styles.settingHeader}>
           <HeaderComponent pageName="Supplements" pageLink="/" />
         </div>
-        <div className="buttonContainer">
+        <div className={styles.buttonContainer}>
           <div className={styles.searchContainer}>
             <Search label="Search Supplement" onSearch={handleSearch} />
           </div>

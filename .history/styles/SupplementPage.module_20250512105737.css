@@ -14,23 +14,6 @@
   image-rendering: -webkit-optimize-contrast;
 }
 
-.settingHeader {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 16px;
-  box-sizing: border-box;
-}
-
-.buttonContainer {
-  width: 100%;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .navigationBarGlobal {
   position: absolute;
   left: 0;
@@ -47,30 +30,17 @@
   min-height: 100vh;
   background-color: #191b21;
   padding: 20px;
-  overflow-y: auto;
-  padding-bottom: 100px;
-  height: 100%;
-  box-sizing: border-box;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
-.mainContainer::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
 }
 
 .searchContainer {
   width: 100%;
   max-width: 370px;
   margin: 20px 0;
-  display: flex;
-  justify-content: center;
 }
 
-.supplementList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  gap: 16px;
-  box-sizing: border-box;
+/* Add responsive styles for larger screens */
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 40px;
+  }
 }

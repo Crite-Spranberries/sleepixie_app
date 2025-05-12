@@ -1,4 +1,6 @@
 import Search from "@/components/Button/Search";
+import Link from "next/link";
+import Image from "next/image";
 import SupplementList from "@/components/SupplementList";
 import HeaderComponent from "@/components/Button/HeaderComponent";
 import NavigationBar from "@/components/Button/NavigationBar";
@@ -14,23 +16,14 @@ export default function SupplementPage() {
 
   return (
     <div className={styles.mobileContainer}>
-      <div
-        className="mainContainer"
-        style={{
-          overflowY: "auto",
-          paddingBottom: 100,
-          height: "100%",
-        }}
-      >
-        <div className="settingHeader">
+      <div className={styles.mainContainer}>
+        <div>
           <HeaderComponent pageName="Supplements" pageLink="/" />
         </div>
-        <div className="buttonContainer">
-          <div className={styles.searchContainer}>
-            <Search label="Search Supplement" onSearch={handleSearch} />
-          </div>
-          <SupplementList searchQuery={searchQuery} />
+        <div className={styles.searchContainer}>
+          <Search label="Search Supplement" onSearch={handleSearch} />
         </div>
+        <SupplementList searchQuery={searchQuery} />
       </div>
       <div className={styles.navigationBarGlobal}>
         <NavigationBar

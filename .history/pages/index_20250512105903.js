@@ -22,8 +22,13 @@ export default function GoalSetting() {
           overflowY: "auto",
           paddingBottom: 100,
           height: "100%",
+          scrollbarWidth: "none", // Firefox
+          msOverflowStyle: "none", // IE/Edge
         }}
       >
+        <style>{`
+          .mainContainer::-webkit-scrollbar { display: none; }
+        `}</style>
         <div className="settingHeader">
           <HeaderComponent pageName="Goal Setting" pageLink="/index" />
         </div>
