@@ -1,5 +1,5 @@
-import styles from '@/components/Button/Button.module.css';
-import Image from 'next/image';
+import styles from "@/components/ui/Button.module.css";
+import Image from "next/image";
 
 const PageButton = ({ label }) => {
   return (

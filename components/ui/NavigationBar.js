@@ -1,5 +1,5 @@
-import styles from '@/components/Button/NavigationBar.module.css';
-import Image from 'next/image';
+import styles from "@/components/ui/NavigationBar.module.css";
+import Image from "next/image";
 
 const NavigationBar = ({ pageName, pageName2, pageName3 }) => {
   return (

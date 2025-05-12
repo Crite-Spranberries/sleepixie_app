@@ -1,6 +1,6 @@
-import styles from '@/components/Button/Button.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
+import styles from "@/components/ui/Button.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 const TwoButton = ({ label1, label2, pageLink }) => {
   return (
