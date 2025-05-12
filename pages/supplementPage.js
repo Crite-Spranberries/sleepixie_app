@@ -1,7 +1,7 @@
-import Search from "@/components/Button/Search";
+import Search from "@/components/ui/Search";
 import SupplementList from "@/components/SupplementList";
-import HeaderComponent from "@/components/Button/HeaderComponent";
-import NavigationBar from "@/components/Button/NavigationBar";
+import HeaderComponent from "@/components/ui/HeaderComponent";
+import NavigationBar from "@/components/ui/NavigationBar";
 import styles from "@/styles/SupplementPage.module.css";
 import { useState } from "react";
 

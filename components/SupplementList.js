@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SupplementCard from "./Button/SupplementCard";
+import SupplementCard from "./ui/SupplementCard";
 import SupplementModal from "./SupplementModal";
 import styles from "./SupplementList.module.css";
 
