@@ -1,0 +1,10 @@
+.settingHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 69px 16px 0 16px;
+  align-items: center;
+}
+
+.pageName {
+  text-align: center;
+}

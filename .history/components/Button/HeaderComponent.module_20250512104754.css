@@ -1,0 +1,6 @@
+.settingHeader {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 69px;
+  gap: 84px;
+}
