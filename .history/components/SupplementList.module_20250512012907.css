@@ -1,0 +1,19 @@
+.supplementList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Add responsive styles for larger screens */
+@media (min-width: 768px) {
+  .supplementList {
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

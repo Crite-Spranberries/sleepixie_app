@@ -1,0 +1,33 @@
+.supplementList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #fff9ec;
+  padding: 20px;
+  font-family: Teachers;
+  font-size: 16px;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Add responsive styles for larger screens */
+@media (min-width: 768px) {
+  .supplementList {
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}

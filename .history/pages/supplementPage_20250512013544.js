@@ -4,24 +4,17 @@ import Image from "next/image";
 import SupplementList from "@/components/SupplementList";
 import HeaderComponent from "@/components/Button/HeaderComponent";
 import styles from "@/styles/SupplementPage.module.css";
-import { useState } from "react";
 
 export default function SupplementPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
   return (
     <div className={styles.mainContainer}>
       <div>
         <HeaderComponent pageName="Supplements" pageLink="/index" />
       </div>
       <div className={styles.searchContainer}>
-        <Search label="Search Supplement" onSearch={handleSearch} />
+        <Search label="Search Supplement" />
       </div>
-      <SupplementList searchQuery={searchQuery} />
+      <SupplementList />
     </div>
   );
 }

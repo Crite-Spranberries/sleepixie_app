@@ -1,0 +1,10 @@
+{
+  "supplements": [
+    {
+      "id": 1,
+      "name": "Melatonin",
+      "image": "/supplements/melatonin.png",
+      "frequency": 0
+    }
+  ]
+}
