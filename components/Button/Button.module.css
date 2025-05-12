@@ -4,10 +4,10 @@
   height: 69px;
   font-size: 20px;
   background-color: #292e37;
-  color: #fff9ec;
+  color: #e8e8e8;
   font-family: Teachers;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: normal;
   border-radius: 10px;
   padding: 19px 0 19px 13px;
@@ -50,10 +50,10 @@
   height: 69px;
   font-size: 20px;
   background-color: #292e37;
-  color: #fff9ec;
+  color: #e8e8e8;
   font-family: Teachers;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: normal;
   border-radius: 10px 10px 0px 0px;
   padding: 19px 0 19px 13px;
@@ -72,10 +72,10 @@
   height: 69px;
   font-size: 20px;
   background-color: #292e37;
-  color: #fff9ec;
+  color: #e8e8e8;
   font-family: Teachers;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: normal;
   border-radius: 0px 0px 10px 10px;
   padding: 19px 0 19px 13px;
@@ -227,4 +227,76 @@
   line-height: normal;
   color: #191b21;
   margin: 30px 0 0 0;
+}
+
+.threeButtonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  gap: 1px;
+  margin-top: 20px;
+}
+
+.threeButtonTop {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #e8e8e8;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  border-radius: 10px 10px 0px 0px;
+  padding: 19px 0 19px 13px;
+  border: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
+
+.threeButtonMiddle {
+  flex-shrink: 0;
+  width: 370px;
+  height: 68px;
+  font-size: 20px;
+  font-family: Teachers;
+  background-color: #292e37;
+  color: #e8e8e8;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  border: 0;
+  padding: 19px 0 19px 13px;
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
+}
+
+.threeButtonBottom {
+  flex-shrink: 0;
+  width: 370px;
+  height: 69px;
+  font-size: 20px;
+  background-color: #292e37;
+  color: #e8e8e8;
+  font-family: Teachers;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  border-radius: 0px 0px 10px 10px;
+  padding: 19px 0 19px 13px;
+  border: 0;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  /* button shadow */
+  box-shadow: 1px 1px 3.1px 0px #ffcb3e;
 }
