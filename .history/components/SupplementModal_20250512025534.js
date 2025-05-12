@@ -7,7 +7,7 @@ const SupplementModal = ({ open, onClose, onSave, title = "Probiotics" }) => {
   const [usageCount, setUsageCount] = useState(1);
   // Counter state for frequency per day
   const [frequency, setFrequency] = useState(1);
-  // State for time (string for now till I edit this later)
+  // State for time (string for now)
   const [time, setTime] = useState("00:00 AM");
   // State for selected days
   const [selectedDays, setSelectedDays] = useState([]);
