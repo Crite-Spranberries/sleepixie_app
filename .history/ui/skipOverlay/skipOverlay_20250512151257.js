@@ -1,0 +1,39 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import GrayButton from "@/ui/buttons/GrayButton";
+import styles from "./SkipOverlay.module.css";
+import YellowFilledButton from "../buttons/YellowFilledButton";
+import YellowButton from "../buttons/YellowButton";
+
+export default function SkipOverlay({ isOpen, onClose }) {
+    const router = useRouter();
+
+    if (!isOpen) return null;
+
+    return (
+        <div className={styles.overlay}>
+            <div className={styles.modal}>
+                <h2 className={styles.title}>Are you sure?</h2>
+                <p className={styles.message}>
+                    Are you sure you want to skip the onboarding process? You
+                    can always complete it later.
+                </p>
+                <div className={styles.buttonContainer}>
+                    <span onClick={onClose}>
+                        <GrayButton label="Skip" />
+                    </span>
+                    <span onClick={onClose}>
+                        <YellowButton label="Continue" />
+                    </span>
+                    <button
+                        className={styles.YellowButton}
+                        onClick={() => router.push("/page1/page.js")}
+                    >
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}

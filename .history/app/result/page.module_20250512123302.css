@@ -1,0 +1,23 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.resultClock {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.level {
+    color: #ffcb3e;
+    font-weight: bold;
+}
