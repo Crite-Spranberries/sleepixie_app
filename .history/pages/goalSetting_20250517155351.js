@@ -6,6 +6,7 @@ import Link from 'next/link';
 import HeaderComponent from '@/components/Button/HeaderComponent';
 import SmallPrimButton from '@/components/Button/SmallPrimButton';
 import SmallSecondButton from '@/components/Button/SmallSecondButton';
+import Notification from '@/components/Notification';
 
 export default function GoalSettingPage() {
   return (

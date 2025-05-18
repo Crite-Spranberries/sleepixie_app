@@ -30,9 +30,6 @@ export default function GoalSettingPage() {
         </div>
         <div className="navigationBarGlobal">
           <NavigationBar
-            sleepIcon="/icons/StarAndCrescent.svg"
-            achievementIcon="/icons/CrownSelected.svg"
-            profileIcon="/icons/UserCircle.svg"
             pageName="Sleep"
             pageName2="Achievement"
             pageName3="Profile"

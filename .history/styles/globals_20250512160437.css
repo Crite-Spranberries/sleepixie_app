@@ -42,7 +42,6 @@ html {
   color: #e8e8e8;
   margin: 0;
   padding: 0;
-  width: 100vw;
 }
 
 body {
@@ -103,7 +102,7 @@ input::placeholder {
 }
 
 .calendar {
-  margin: 60px 16px 105px 16px;
+  margin: 60px 16px 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;

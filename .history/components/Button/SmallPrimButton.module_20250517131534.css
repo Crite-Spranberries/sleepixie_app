@@ -1,0 +1,11 @@
+.smallPrimButtonContainer {
+  width: 161px;
+  height: 47px;
+  border-radius: 52px;
+  background-color: #80a7ff;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

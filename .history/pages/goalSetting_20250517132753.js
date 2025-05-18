@@ -6,7 +6,7 @@ import Link from 'next/link';
 import HeaderComponent from '@/components/Button/HeaderComponent';
 import SmallPrimButton from '@/components/Button/SmallPrimButton';
 import SmallSecondButton from '@/components/Button/SmallSecondButton';
-
+import Notification from '@/components/Notification';
 export default function GoalSettingPage() {
   return (
     <div className="mainContainer">
@@ -30,14 +30,12 @@ export default function GoalSettingPage() {
         </div>
         <div className="navigationBarGlobal">
           <NavigationBar
-            sleepIcon="/icons/StarAndCrescent.svg"
-            achievementIcon="/icons/CrownSelected.svg"
-            profileIcon="/icons/UserCircle.svg"
             pageName="Sleep"
             pageName2="Achievement"
             pageName3="Profile"
           />
         </div>
+        <Notification />
       </div>
     </div>
   );

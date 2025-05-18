@@ -65,7 +65,7 @@ export default function AchievementPage() {
           />
         </span>
       </div>
-
+      <div className="navigationBarGlobal"></div>
       <div className="navigationBarGlobal">
         <NavigationBar
           sleepIcon="/icons/StarAndCrescent.svg"
@@ -79,7 +79,7 @@ export default function AchievementPage() {
       <span
         onClick={() => {
           console.log('clicked');
-          router.push('/weeklyCalendarPage');
+          router.push('/weeklyCalendar');
         }}
         style={{ cursor: 'pointer', display: 'inline-block' }}
       >

@@ -6,6 +6,7 @@ import HeaderComponent from '@/components/Button/HeaderComponent';
 import Calendar from '@/components/Calendar';
 import ThreeButton from '@/components/Button/ThreeButton';
 import { useRouter } from 'next/navigation';
+import SmallPrimButton from '@/components/Button/SmallPrimButton';
 
 export default function AchievementPage() {
   const router = useRouter();
@@ -87,6 +88,7 @@ export default function AchievementPage() {
           <Calendar month={2} year={2025} highlightDay={3} />
         </div>
       </span>
+      <SmallPrimButton label="Accept" onClick={() => {}} />
     </div>
   );
 }

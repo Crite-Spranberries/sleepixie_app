@@ -1,0 +1,14 @@
+.notificationContainer {
+  width: 370px;
+  height: 234px;
+  background-color: #292e37;
+  border-radius: 20px;
+}
+
+.notificationTitle {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 29px; /* 90.625% */
+  text-align: center;
+}

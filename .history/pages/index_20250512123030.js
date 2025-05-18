@@ -79,7 +79,7 @@ export default function AchievementPage() {
       <span
         onClick={() => {
           console.log('clicked');
-          router.push('/weeklyCalendarPage');
+          router.push('/weeklyCalendar');
         }}
         style={{ cursor: 'pointer', display: 'inline-block' }}
       >

@@ -5,8 +5,6 @@ import NavigationBar from '@/components/Button/NavigationBar';
 import Link from 'next/link';
 import HeaderComponent from '@/components/Button/HeaderComponent';
 import SmallPrimButton from '@/components/Button/SmallPrimButton';
-import SmallSecondButton from '@/components/Button/SmallSecondButton';
-
 export default function GoalSettingPage() {
   return (
     <div className="mainContainer">
@@ -30,14 +28,12 @@ export default function GoalSettingPage() {
         </div>
         <div className="navigationBarGlobal">
           <NavigationBar
-            sleepIcon="/icons/StarAndCrescent.svg"
-            achievementIcon="/icons/CrownSelected.svg"
-            profileIcon="/icons/UserCircle.svg"
             pageName="Sleep"
             pageName2="Achievement"
             pageName3="Profile"
           />
         </div>
+        <SmallPrimButton label="Accept" onClick={() => {}} />
       </div>
     </div>
   );

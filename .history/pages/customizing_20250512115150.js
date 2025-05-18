@@ -11,7 +11,7 @@ export default function CustomizingPage() {
       <HeaderComponent pageName="Customizing/Themes" pageLink="/character" />
       <CharacterCard2 />
       <div>
-        <p className="colorTheme">Color Theme</p>
+        <p className="styles.colorTheme">Color theme</p>
       </div>
       <div className="colorChipContainer">
         <Image
