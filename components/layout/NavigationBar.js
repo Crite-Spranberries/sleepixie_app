@@ -1,39 +1,30 @@
-import styles from "./NavigationBar.module.css";
+import styles from "@/components/layout/NavigationBar.module.css";
 import Image from "next/image";
 
-const NavigationBar = () => {
+const NavigationBar = ({ pageName, pageName2, pageName3 }) => {
   return (
     <div className={styles.navigationBar}>
-      <div className={styles.navItem}>
-        <Image src="/icons/HomeIcon.svg" alt="Home" width={24} height={24} />
-        <span>Home</span>
-      </div>
-      <div className={styles.navItem}>
+      <div className={styles.navigationBarSleep}>
         <Image
-          src="/icons/CalendarIcon.svg"
-          alt="Calendar"
-          width={24}
-          height={24}
+          src="/icons/StarAndCrescent.svg"
+          alt="arrow-left"
+          width={25}
+          height={25}
         />
-        <span>Calendar</span>
+        <p className={styles.pageName}>{pageName}</p>
       </div>
-      <div className={styles.navItem}>
-        <Image
-          src="/icons/CharacterIcon.svg"
-          alt="Character"
-          width={24}
-          height={24}
-        />
-        <span>Character</span>
+      <div className={styles.navigationBarAchievement}>
+        <Image src="/icons/Crown.svg" alt="arrow-left" width={25} height={25} />
+        <p className={styles.pageName2}>{pageName2}</p>
       </div>
-      <div className={styles.navItem}>
+      <div className={styles.navigationBarProfile}>
         <Image
-          src="/icons/SettingIcon.svg"
-          alt="Settings"
-          width={24}
-          height={24}
+          src="/icons/UserCircle.svg"
+          alt="arrow-left"
+          width={25}
+          height={25}
         />
-        <span>Settings</span>
+        <p className={styles.pageName3}>{pageName3}</p>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
 import Search from "@/components/ui/Search";
 import SupplementList from "@/components/feature/SupplementList";
 import HeaderComponent from "@/components/ui/HeaderComponent";
-import NavigationBar from "@/components/ui/NavigationBar";
+import NavigationBar from "@/components/layout/NavigationBar";
 import styles from "@/styles/SupplementPage.module.css";
 import { useState } from "react";
 

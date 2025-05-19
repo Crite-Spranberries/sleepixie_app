@@ -6,7 +6,7 @@ import Image from "next/image";
 import Search from "@/components/ui/Search";
 import SupplementCard from "@/components/feature/SupplementCard";
 import SelectedSupplementCard from "@/components/feature/SelectedSupplementCard";
-import NavigationBar from "@/components/ui/NavigationBar";
+import NavigationBar from "@/components/layout/NavigationBar";
 import Link from "next/link";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import Calendar from "@/components/feature/Calendar";
