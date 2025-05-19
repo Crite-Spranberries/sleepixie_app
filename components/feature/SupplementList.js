@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import SupplementCard from "./SupplementCard";
 import SupplementModal from "./SupplementModal";
+import SelectedSupplementCard from "./SelectedSupplementCard";
 import styles from "./SupplementList.module.css";
 
 // Handles loading, searching, and displaying supplement cards
@@ -12,6 +13,7 @@ const SupplementList = ({ searchQuery = "" }) => {
   // Modal state
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSupplement, setSelectedSupplement] = useState(null);
+  const [selectedSupplements, setSelectedSupplements] = useState({});
 
   // Load supplements from JSON on mount
   useEffect(() => {
@@ -37,10 +39,22 @@ const SupplementList = ({ searchQuery = "" }) => {
     setModalOpen(true);
   };
 
-  // Log modal data and close
+  // Save selected supplement data
   const handleModalSave = (modalData) => {
-    console.log("Modal data:", modalData);
+    setSelectedSupplements((prev) => ({
+      ...prev,
+      [selectedSupplement.id]: { ...selectedSupplement, ...modalData },
+    }));
     setModalOpen(false);
+  };
+
+  // Remove selected supplement
+  const handleRemove = (id) => {
+    setSelectedSupplements((prev) => {
+      const copy = { ...prev };
+      delete copy[id];
+      return copy;
+    });
   };
 
   // Close modal
@@ -74,15 +88,29 @@ const SupplementList = ({ searchQuery = "" }) => {
   return (
     <>
       <div className={styles.supplementList}>
-        {filtered.map((supplement) => (
-          <SupplementCard
-            key={supplement.id}
-            name={supplement.name}
-            image={supplement.image}
-            frequency={supplement.frequency}
-            onAdd={() => openModal(supplement)}
-          />
-        ))}
+        {filtered.map((supplement) => {
+          const selected = selectedSupplements[supplement.id];
+          return selected ? (
+            <SelectedSupplementCard
+              key={supplement.id}
+              name={supplement.name}
+              image={supplement.image}
+              frequency={selected.frequency}
+              usageCount={selected.usageCount}
+              time={selected.time}
+              days={selected.selectedDays}
+              onRemove={() => handleRemove(supplement.id)}
+            />
+          ) : (
+            <SupplementCard
+              key={supplement.id}
+              name={supplement.name}
+              image={supplement.image}
+              frequency={supplement.frequency}
+              onAdd={() => openModal(supplement)}
+            />
+          );
+        })}
       </div>
       {modalOpen && selectedSupplement && (
         <SupplementModal

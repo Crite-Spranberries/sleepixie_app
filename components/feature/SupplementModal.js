@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import styles from "./SupplementModal.module.css";
+import Image from "next/image";
 
 // Modal for editing supplement details
 const SupplementModal = ({ open, onClose, onSave, title = "Probiotics" }) => {
   const [usageCount, setUsageCount] = useState(1);
   const [frequency, setFrequency] = useState(1);
-  const [time, setTime] = useState("00:00 AM"); // Placeholder for now
+  const getCurrentTime = () => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    return `${hours}:${minutes}`;
+  };
+  const [time, setTime] = useState(getCurrentTime());
   const [selectedDays, setSelectedDays] = useState([]);
 
   const days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
@@ -61,8 +68,12 @@ const SupplementModal = ({ open, onClose, onSave, title = "Probiotics" }) => {
         <div className={styles.section}>
           <div className={styles.sectionTitle}>Time</div>
           <div className={styles.timePicker}>
-            <span className={styles.clockIcon}>🕒</span>
-            <span>{time}</span>
+            <input
+              type="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+              className={styles.timeInput}
+            />
           </div>
           <div className={styles.daysRow}>
             {days.map((day) => (
