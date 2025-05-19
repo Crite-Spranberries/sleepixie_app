@@ -5,7 +5,13 @@ const SupplementCard = ({ name, image, frequency, onAdd }) => {
   return (
     <div className={styles.supplementCard}>
       <div className={styles.cardImage}>
-        <Image src={image} alt={name} width={100} height={100} />
+        <Image
+          src={image}
+          alt={name}
+          width={70}
+          height={70}
+          style={{ objectFit: "cover", borderRadius: "10px" }}
+        />
       </div>
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{name}</h3>
