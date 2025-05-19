@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SupplementModal.module.css";
+import styles from "@/components/SupplementModal.module.css";
 
 // Modal for editing supplement details
 const SupplementModal = ({ open, onClose, onSave, title = "Probiotics" }) => {

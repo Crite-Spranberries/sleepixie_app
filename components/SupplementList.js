@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import SupplementCard from "./ui/SupplementCard";
-import SupplementModal from "./SupplementModal";
-import styles from "./SupplementList.module.css";
+import SupplementCard from "@/components/ui/SupplementCard";
+import SupplementModal from "@/components/SupplementModal";
+import styles from "@/components/SupplementList.module.css";
 
 // Handles loading, searching, and displaying supplement cards
 const SupplementList = ({ searchQuery = "" }) => {
@@ -51,9 +51,15 @@ const SupplementList = ({ searchQuery = "" }) => {
     s.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  if (loading)
+  // Handle different states with early returns
+  if (loading) {
     return <div className={styles.loading}>Loading supplements...</div>;
-  if (error) return <div className={styles.error}>Error: {error}</div>;
+  }
+
+  if (error) {
+    return <div className={styles.error}>Error: {error}</div>;
+  }
+
   if (searchQuery && filtered.length === 0) {
     return (
       <div className={styles.noResults}>

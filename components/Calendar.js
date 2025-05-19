@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Calendar.module.css';
+import React from "react";
+import styles from "@/components/Calendar.module.css";
 
 function getWeeks(year, month) {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -13,7 +13,7 @@ function getWeeks(year, month) {
       if (day > 0 && day <= daysInMonth) {
         week.push(day);
       } else {
-        week.push('');
+        week.push("");
       }
     }
     weeks.push(week);
@@ -24,18 +24,18 @@ function getWeeks(year, month) {
 export default function Calendar({ month = 2, year = 2025, highlightDay = 3 }) {
   // month: 0-based (0=Jan, 1=Feb, 2=Mar, ...)
   const monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   const weeks = getWeeks(year, month);
 
