@@ -2,15 +2,15 @@ import PageButton from "@/components/ui/PageButton";
 import TwoButton from "@/components/ui/TwoButton";
 import Image from "next/image";
 import Search from "@/components/ui/Search";
-import SupplementCard from "@/components/ui/SupplementCard";
-import SelectedSupplementCard from "@/components/ui/SelectedSupplementCard";
+import SupplementCard from "@/components/feature/SupplementCard";
+import SelectedSupplementCard from "@/components/feature/SelectedSupplementCard";
 import NavigationBar from "@/components/ui/NavigationBar";
 import Link from "next/link";
 import HeaderComponent from "@/components/ui/HeaderComponent";
-import Calendar from "@/components/Calendar";
-import CharacterCard from "@/components/CharacterCard";
+import Calendar from "@/components/feature/Calendar";
+import CharacterCard from "@/components/feature/CharacterCard";
 import ThreeButton from "@/components/ui/ThreeButton";
-import CharacterCard2 from "@/components/CharacterCard2";
+import CharacterCard2 from "@/components/feature/CharacterCard2";
 import styles from "@/styles/SupplementPage.module.css";
 
 export default function GoalSetting() {

@@ -1,5 +1,5 @@
 import Search from "@/components/ui/Search";
-import SupplementList from "@/components/SupplementList";
+import SupplementList from "@/components/feature/SupplementList";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import NavigationBar from "@/components/ui/NavigationBar";
 import styles from "@/styles/SupplementPage.module.css";
