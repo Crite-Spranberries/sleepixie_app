@@ -1,5 +1,5 @@
-import styles from './CharacterCard.module.css';
-import Image from 'next/image';
+import styles from "./CharacterCard.module.css";
+import Image from "next/image";
 
 const CharacterCard2 = ({ video }) => {
   return (
@@ -12,7 +12,7 @@ const CharacterCard2 = ({ video }) => {
           loop
           width={350}
           height={198}
-          style={{ borderRadius: '30px' }}
+          style={{ borderRadius: "30px" }}
         />
       </div>
       <div className={styles.characterLevelBar2}>

@@ -1,3 +1,5 @@
+"use client";
+
 import Search from "@/components/ui/Search";
 import SupplementList from "@/components/feature/SupplementList";
 import HeaderComponent from "@/components/ui/HeaderComponent";

@@ -51,9 +51,15 @@ const SupplementList = ({ searchQuery = "" }) => {
     s.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  if (loading)
+  // Handle different states with early returns
+  if (loading) {
     return <div className={styles.loading}>Loading supplements...</div>;
-  if (error) return <div className={styles.error}>Error: {error}</div>;
+  }
+
+  if (error) {
+    return <div className={styles.error}>Error: {error}</div>;
+  }
+
   if (searchQuery && filtered.length === 0) {
     return (
       <div className={styles.noResults}>
