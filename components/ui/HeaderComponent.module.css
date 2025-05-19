@@ -1,6 +1,37 @@
 .settingHeader {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 69px 0 0 16px;
-  gap: 84px;
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 56px;
+  position: relative;
+}
+
+.left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 40px;
+}
+
+.center {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  flex: 0 0 auto;
+  min-width: 40px;
+}
+
+.settingHeader a {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  padding-left: 0;
 }
