@@ -6,39 +6,54 @@ import Link from "next/link";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import SmallPrimButton from "@/components/ui/SmallPrimButton";
 import SmallSecondButton from "@/components/ui/SmallSecondButton";
+import styles from "@/styles/SupplementPage.module.css";
 
 export default function GoalSettingPage() {
   return (
-    <div className="mainContainer">
-      <div className="settingHeader">
-        <HeaderComponent pageName="Goal Setting" pageLink="/index" />
-      </div>
-      <div className="buttonContainer">
-        <p className="sleep">Sleep</p>
-        <div>
-          <PageButton label="Bedtime Setting" />
+    <div className={styles.mobileContainer}>
+      {/* Scrollable main content area */}
+
+      <main
+        className="mainContainer"
+        style={{
+          overflowY: "auto",
+          paddingBottom: 100,
+          height: "100%",
+        }}
+      >
+        <div className="settingHeader">
+          <HeaderComponent pageName="Goal Setting" pageLink="/" />
         </div>
-      </div>
-      <div className="buttonContainer">
-        <p className="additional">Additional</p>
-        <div>
-          <TwoButton
-            label1="Supplements Setting"
-            label2="Water Setting"
-            pageLink="/supplementPage"
-          />
+        <div className="buttonContainer">
+          <p className="sleep">Sleep</p>
+          <div>
+            <PageButton label="Bedtime Setting" />
+          </div>
         </div>
-        <div className="navigationBarGlobal">
-          <NavigationBar
-            sleepIcon="/icons/StarAndCrescent.svg"
-            achievementIcon="/icons/CrownSelected.svg"
-            profileIcon="/icons/UserCircle.svg"
-            pageName="Sleep"
-            pageName2="Achievement"
-            pageName3="Profile"
-          />
+        <div className="buttonContainer">
+          <p className="additional">Additional</p>
+          <div>
+            <TwoButton
+              label1="Supplements Setting"
+              label2="Water Setting"
+              pageLink="/supplementPage"
+            />
+          </div>
         </div>
-      </div>
+      </main>
+
+      {/* Fixed navigation bar at the bottom of the mobile container */}
+
+      <nav className={styles.navigationBarGlobal}>
+        <NavigationBar
+          sleepIcon="/icons/StarAndCrescent.svg"
+          achievementIcon="/icons/CrownSelected.svg"
+          profileIcon="/icons/UserCircle.svg"
+          pageName="Sleep"
+          pageName2="Achievement"
+          pageName3="Profile"
+        />
+      </nav>
     </div>
   );
 }

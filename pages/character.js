@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import CharacterCard from '@/components/CharacterCard';
-import PrimaryButton from '@/components/Button/PrimaryButton';
-import HeaderComponent from '@/components/Button/HeaderComponent';
-import { useRouter } from 'next/navigation';
+import Image from "next/image";
+import CharacterCard from "@/components/feature/CharacterCard";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import HeaderComponent from "@/components/ui/HeaderComponent";
+import { useRouter } from "next/navigation";
 
 export default function CharacterPage() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function CharacterPage() {
       />
       <PrimaryButton
         label="Cutomizing/Color"
-        onClick={() => router.push('/customizing')}
+        onClick={() => router.push("/customizing")}
       />
     </div>
   );

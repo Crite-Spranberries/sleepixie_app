@@ -9,21 +9,31 @@ import Image from "next/image";
 export default function WeeklyCalendarPage() {
   const router = useRouter();
   return (
-    <div>
-      <HeaderComponent pageName="Weekly Calendar" pageLink="/index" />
-      <WeeklyCalendar />
-      <Image
-        className="timeProgress"
-        src="/images/TimeProgress1.png"
-        alt="Time Progress"
-        width={402}
-        height={717}
-      />
+    <div className={styles.mobileContainer}>
+      {/* Scrollable main content area */}
+      <main
+        className="mainContainer"
+        style={{
+          overflowY: "auto",
+          paddingBottom: 100,
+          height: "100%",
+        }}
+      >
+        <HeaderComponent pageName="Weekly Calendar" pageLink="/" />
+        <WeeklyCalendar />
+        <Image
+          className="timeProgress"
+          src="/images/TimeProgress1.png"
+          alt="Time Progress"
+          width={402}
+          height={717}
+        />
+      </main>
       <div className="navigationBarGlobal">
         <NavigationBar
-          sleepIcon="/icons/StarAndCrescent.svg"
-          achievementIcon="/icons/CrownSelected.svg"
-          profileIcon="/icons/UserCircle.svg"
+          sleepIcon=".public/icons/StarAndCrescent.svg"
+          achievementIcon=".public/icons/CrownSelected.svg"
+          profileIcon=".public/icons/UserCircle.svg"
           pageName="Sleep"
           pageName2="Achievement"
           pageName3="Profile"

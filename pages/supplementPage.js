@@ -20,7 +20,7 @@ export default function SupplementPage() {
     // Main mobile container for fixed-width layout
     <div className={styles.mobileContainer}>
       {/* Scrollable main content area */}
-      <div
+      <main
         className="mainContainer"
         style={{
           overflowY: "auto",
@@ -29,27 +29,32 @@ export default function SupplementPage() {
         }}
       >
         {/* Header with back button and page title */}
-        <div className="settingHeader">
-          <HeaderComponent pageName="Supplements" pageLink="/" />
-        </div>
+        <header className="settingHeader">
+          <HeaderComponent pageName="Supplements" pageLink="/goalSetting" />
+        </header>
         {/* Container for search bar and supplement list */}
-        <div className="buttonContainer">
+        <section className="buttonContainer">
           {/* Search bar for filtering supplements */}
           <div className={styles.searchContainer}>
             <Search label="Search Supplement" onSearch={handleSearch} />
           </div>
           {/* List of supplement cards, filtered by search */}
           <SupplementList searchQuery={searchQuery} />
-        </div>
-      </div>
+        </section>
+      </main>
+
       {/* Fixed navigation bar at the bottom of the mobile container */}
-      <div className={styles.navigationBarGlobal}>
+
+      <nav className={styles.navigationBarGlobal}>
         <NavigationBar
+          sleepIcon="/icons/StarAndCrescent.svg"
+          achievementIcon="/icons/CrownSelected.svg"
+          profileIcon="/icons/UserCircle.svg"
           pageName="Sleep"
           pageName2="Achievement"
           pageName3="Profile"
         />
-      </div>
+      </nav>
     </div>
   );
 }
