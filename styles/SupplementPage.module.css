@@ -1,7 +1,6 @@
 .mobileContainer {
   width: 402px;
-  height: 874px;
-  min-height: 874px;
+  height: 100vh;
   max-width: 402px;
   margin: 0 auto;
   background: #191b21;
@@ -10,6 +9,7 @@
   flex-direction: column;
   align-items: stretch;
   position: relative;
+  overflow: hidden;
   /* Simulate device pixel ratio of 3 for iPhone 16 Pro (visual only) */
   image-rendering: -webkit-optimize-contrast;
 }
@@ -21,6 +21,7 @@
   justify-content: flex-start;
   padding-left: 16px;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .buttonContainer {
@@ -29,6 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .navigationBarGlobal {
@@ -38,22 +41,23 @@
   bottom: 0;
   width: 100%;
   z-index: 20;
+  flex-shrink: 0;
 }
 
 .mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  flex: 1;
   background-color: #191b21;
   padding: 20px;
   overflow-y: auto;
   padding-bottom: 100px;
-  height: 100%;
   box-sizing: border-box;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
+
 .mainContainer::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
@@ -64,6 +68,7 @@
   margin: 20px 0;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .supplementList {
@@ -73,4 +78,5 @@
   margin: 0 auto;
   gap: 16px;
   box-sizing: border-box;
+  width: 100%;
 }

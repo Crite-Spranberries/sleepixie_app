@@ -4,7 +4,9 @@ import Link from "next/link";
 import NavigationBar from "@/components/layout/NavigationBar";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import WeeklyCalendar from "@/components/feature/WeeklyCalendar";
+import styles from "@/styles/SupplementPage.module.css";
 import Image from "next/image";
+import Calendar from "@/components/feature/WeeklyCalendar";
 
 export default function WeeklyCalendarPage() {
   const router = useRouter();
@@ -21,6 +23,9 @@ export default function WeeklyCalendarPage() {
       >
         <HeaderComponent pageName="Weekly Calendar" pageLink="/" />
         <WeeklyCalendar />
+        <div className="calendar">
+          <Calendar month={2} year={2025} highlightDay={3} />
+        </div>
         <Image
           className="timeProgress"
           src="/images/TimeProgress1.png"
@@ -29,16 +34,16 @@ export default function WeeklyCalendarPage() {
           height={717}
         />
       </main>
-      <div className="navigationBarGlobal">
+      <nav className={styles.navigationBarGlobal}>
         <NavigationBar
-          sleepIcon=".public/icons/StarAndCrescent.svg"
-          achievementIcon=".public/icons/CrownSelected.svg"
-          profileIcon=".public/icons/UserCircle.svg"
+          sleepIcon="./icons/StarAndCrescent.svg"
+          achievementIcon="./icons/CrownSelected.svg"
+          profileIcon="./icons/UserCircle.svg"
           pageName="Sleep"
           pageName2="Achievement"
           pageName3="Profile"
         />
-      </div>
+      </nav>
     </div>
   );
 }
