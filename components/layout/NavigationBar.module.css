@@ -30,6 +30,7 @@
   color: #e8e8e8;
   margin: 0;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .navigationBarSleep {

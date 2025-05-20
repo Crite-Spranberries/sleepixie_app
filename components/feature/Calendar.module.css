@@ -74,17 +74,31 @@
 .calendarTable td {
   width: 40px;
   height: 40px;
-  text-align: center;
-  vertical-align: middle;
+  text-align: left;
+  vertical-align: top;
   font-size: 16px;
   border: 1px solid #fff9ec;
   background: none;
   color: #fff9ec;
+  padding: 4px 0 0 6px;
+  position: relative;
 }
 
 .highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  background: #ffcb3e;
+  color: #393939;
   font-weight: 800;
+  font-size: 15px;
+  margin: 0;
+  position: static;
+  line-height: 1;
+  padding: 0;
 }
 
 /*.empty {

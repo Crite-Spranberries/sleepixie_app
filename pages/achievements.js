@@ -78,9 +78,6 @@ export default function AchievementPage() {
               console.log("Calendar clicked");
               router.push("/weeklyCalendarPage");
             }}
-            month={2}
-            year={2025}
-            highlightDay={3}
           />
         </div>
       </main>

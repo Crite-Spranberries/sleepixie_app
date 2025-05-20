@@ -22,8 +22,14 @@ function getWeeks(year, month) {
   return weeks;
 }
 
-export default function Calendar({ month = 2, year = 2025, highlightDay = 3 }) {
-  // month: 0-based (0=Jan, 1=Feb, 2=Mar, ...)
+export default function Calendar({ month, year, highlightDay }) {
+  // If props are not provided, use the current date
+  const today = new Date();
+  const currentMonth = month !== undefined ? month : today.getMonth();
+  const currentYear = year !== undefined ? year : today.getFullYear();
+  const currentDay =
+    highlightDay !== undefined ? highlightDay : today.getDate();
+
   const monthNames = [
     "January",
     "February",
@@ -38,29 +44,24 @@ export default function Calendar({ month = 2, year = 2025, highlightDay = 3 }) {
     "November",
     "December",
   ];
-  const weeks = getWeeks(year, month);
+  const weeks = getWeeks(currentYear, currentMonth);
 
   return (
     <Link href="/weeklyCalendarPage" className={styles.calendarLink}>
       <div className={styles.calendarContainer}>
         <div className={styles.calendarHeader}>Calendar</div>
-        <div className={styles.calendarMonth}>{monthNames[month]}</div>
+        <div className={styles.calendarMonth}>{monthNames[currentMonth]}</div>
         <table className={styles.calendarTable}>
           <tbody>
             {weeks.map((week, i) => (
               <tr key={i}>
                 {week.map((date, j) => (
-                  <td
-                    key={j}
-                    className={
-                      date === highlightDay
-                        ? styles.highlight
-                        : date
-                        ? styles.day
-                        : styles.empty
-                    }
-                  >
-                    {date}
+                  <td key={j} className={date ? styles.day : styles.empty}>
+                    {date === currentDay && date ? (
+                      <span className={styles.highlight}>{date}</span>
+                    ) : (
+                      date
+                    )}
                   </td>
                 ))}
               </tr>
