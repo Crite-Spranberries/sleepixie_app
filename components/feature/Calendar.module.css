@@ -26,6 +26,17 @@
   margin-bottom: 14px;
 }
 
+.calendarLink {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.calendarLink:hover {
+  transform: scale(1.02);
+}
+
 .calendarContainer {
   background: #393939;
   border-radius: 12px 12px 0 0;

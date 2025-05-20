@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
-import NavigationBar from "@/components/ui/NavigationBar";
+import NavigationBar from "@/components/layout/NavigationBar";
 import Link from "next/link";
 import HeaderComponent from "@/components/ui/HeaderComponent";
-import Calendar from "@/components/Calendar";
+import Calendar from "@/components/feature/Calendar";
 import ThreeButton from "@/components/ui/ThreeButton";
 import { useRouter } from "next/navigation";
 import styles from "@/styles/SupplementPage.module.css";
+import PageHeaderComponent from "@/components/ui/PageHeaderComponent";
 
 export default function AchievementPage() {
   const router = useRouter();
   return (
     <div className={styles.mobileContainer}>
-      {/* Scrollable main content area */}
       <main
         className="mainContainer"
         style={{
@@ -21,9 +21,14 @@ export default function AchievementPage() {
           height: "100%",
         }}
       >
-        <h3 className="weeklyAchievement">Weekly Achievement</h3>
+        <PageHeaderComponent pageName="Achievements" pageLink="/" />
         <div className="characterContainerProgress">
           <Image
+            onClick={() => {
+              console.log("clicked");
+              router.push("/character");
+            }}
+            style={{ cursor: "pointer", display: "inline-block" }}
             className="character"
             src="/images/character.png"
             alt="character"
@@ -31,7 +36,7 @@ export default function AchievementPage() {
             height={310}
           />
         </div>
-        <h3 className="myGoal">My Goal</h3>
+        <PageHeaderComponent pageName="My Goal" />
         <div className="myGoalContainer">
           <Image
             src="/icons/BedProgress.svg"
@@ -68,14 +73,22 @@ export default function AchievementPage() {
           </span>
         </div>
         <div className="calendar">
-          <Calendar month={2} year={2025} highlightDay={3} />
+          <Calendar
+            onClick={() => {
+              console.log("Calendar clicked");
+              router.push("/weeklyCalendarPage");
+            }}
+            month={2}
+            year={2025}
+            highlightDay={3}
+          />
         </div>
       </main>
 
       <nav className={styles.navigationBarGlobal}>
         <NavigationBar
           sleepIcon="/icons/StarAndCrescent.svg"
-          achievementIcon="/icons/Crown.svg"
+          achievementIcon="/icons/CrownSelected.svg"
           profileIcon="/icons/UserCircle.svg"
           pageName="Sleep"
           pageName2="Achievement"

@@ -22,7 +22,7 @@ export default function GoalSettingPage() {
         }}
       >
         <div className="settingHeader">
-          <HeaderComponent pageName="Goal Setting" pageLink="/" />
+          <HeaderComponent pageName="Goal Setting" pageLink="/achievements" />
         </div>
         <div className="buttonContainer">
           <p className="settingLabels">Sleep</p>

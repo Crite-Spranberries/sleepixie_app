@@ -3,16 +3,16 @@ import Image from "next/image";
 import NavigationBar from "@/components/layout/NavigationBar";
 import Link from "next/link";
 import HeaderComponent from "@/components/ui/HeaderComponent";
-import Calendar from "@/components/feature/WeeklyCalendar";
+import Calendar from "@/components/feature/Calendar";
 import ThreeButton from "@/components/ui/ThreeButton";
 import { useRouter } from "next/navigation";
 import styles from "@/styles/SupplementPage.module.css";
-import PageHeaderComponent from "@/components/ui/PageHeaderComponent";
 
 export default function AchievementPage() {
   const router = useRouter();
   return (
     <div className={styles.mobileContainer}>
+      {/* Scrollable main content area */}
       <main
         className="mainContainer"
         style={{
@@ -21,22 +21,8 @@ export default function AchievementPage() {
           height: "100%",
         }}
       >
-        <PageHeaderComponent pageName="Achievements" pageLink="/" />
-        <div className="characterContainerProgress">
-          <Image
-            onClick={() => {
-              console.log("clicked");
-              router.push("/character");
-            }}
-            style={{ cursor: "pointer", display: "inline-block" }}
-            className="character"
-            src="/images/character.png"
-            alt="character"
-            width={370}
-            height={310}
-          />
-        </div>
-        <PageHeaderComponent pageName="My Goal" />
+        <h3 className="weeklyAchievement">Sleep Tracker</h3>
+
         <div className="myGoalContainer">
           <Image
             src="/icons/BedProgress.svg"
@@ -72,24 +58,12 @@ export default function AchievementPage() {
             />
           </span>
         </div>
-        <div className="calendar">
-          <Calendar
-            onClick={() => {
-              console.log("clicked");
-              router.push("/weeklyCalendarPage");
-            }}
-            style={{ cursor: "pointer", display: "inline-block" }}
-            month={2}
-            year={2025}
-            highlightDay={3}
-          />
-        </div>
       </main>
 
       <nav className={styles.navigationBarGlobal}>
         <NavigationBar
-          sleepIcon="/icons/StarAndCrescent.svg"
-          achievementIcon="/icons/CrownSelected.svg"
+          sleepIcon="/icons/StarAndCrescentSelected.svg"
+          achievementIcon="/icons/Crown.svg"
           profileIcon="/icons/UserCircle.svg"
           pageName="Sleep"
           pageName2="Achievement"

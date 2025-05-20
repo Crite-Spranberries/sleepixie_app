@@ -49,10 +49,6 @@ export default function CustomizingPage() {
             height={82}
           />
         </div>
-        <PrimaryButton
-          label="Customizing/Color"
-          onClick={() => router.push("/customizing")}
-        />
       </main>
 
       <nav className={styles.navigationBarGlobal}>

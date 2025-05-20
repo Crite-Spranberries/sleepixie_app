@@ -4,6 +4,7 @@
   background-color: #292e37;
   margin: 30px 0 0 0;
   padding: 0;
+  border-radius: 5px;
 }
 
 .characterVideo {
@@ -65,15 +66,15 @@
   width: 370px;
   height: 265px;
   background-color: #292e37;
-  margin-top: 20px;
-  margin-left: 16px;
+  margin: 30px 0 0 0;
   padding: 0;
+  border-radius: 5px;
 }
 
 .characterVideo2 {
   display: flex;
   margin: 0;
-  padding: 18px 10px 0 10px;
+  padding: 14px 10px 0 10px;
 }
 
 .characterLevelBar2 {

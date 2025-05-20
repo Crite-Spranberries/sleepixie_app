@@ -29,6 +29,7 @@
   text-align: center;
   color: #e8e8e8;
   margin: 0;
+  transition: color 0.2s ease;
 }
 
 .navigationBarSleep {
@@ -52,4 +53,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
+.Link:active {
+  text-decoration: underline;
+  color: yellow;
+}
+
+.active {
+  color: #ffcb3e;
 }

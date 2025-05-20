@@ -18,7 +18,7 @@ export default function CharacterPage() {
           height: "100%",
         }}
       >
-        <HeaderComponent pageName="Achievement" pageLink="/" />
+        <HeaderComponent pageName="Achievement" pageLink="/achievements" />
         <CharacterCard
           LevelGoal="Sleep for at least 7 hours for a month"
           level1="/icons/SelectedLevel1.svg"

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Calendar.module.css";
+import Link from "next/link";
 
 function getWeeks(year, month) {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -40,31 +41,33 @@ export default function Calendar({ month = 2, year = 2025, highlightDay = 3 }) {
   const weeks = getWeeks(year, month);
 
   return (
-    <div className={styles.calendarContainer}>
-      <div className={styles.calendarHeader}>Calendar</div>
-      <div className={styles.calendarMonth}>{monthNames[month]}</div>
-      <table className={styles.calendarTable}>
-        <tbody>
-          {weeks.map((week, i) => (
-            <tr key={i}>
-              {week.map((date, j) => (
-                <td
-                  key={j}
-                  className={
-                    date === highlightDay
-                      ? styles.highlight
-                      : date
-                      ? styles.day
-                      : styles.empty
-                  }
-                >
-                  {date}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Link href="/weeklyCalendarPage" className={styles.calendarLink}>
+      <div className={styles.calendarContainer}>
+        <div className={styles.calendarHeader}>Calendar</div>
+        <div className={styles.calendarMonth}>{monthNames[month]}</div>
+        <table className={styles.calendarTable}>
+          <tbody>
+            {weeks.map((week, i) => (
+              <tr key={i}>
+                {week.map((date, j) => (
+                  <td
+                    key={j}
+                    className={
+                      date === highlightDay
+                        ? styles.highlight
+                        : date
+                        ? styles.day
+                        : styles.empty
+                    }
+                  >
+                    {date}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Link>
   );
 }
