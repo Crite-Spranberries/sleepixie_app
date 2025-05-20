@@ -46,6 +46,9 @@ export default function Calendar({ month, year, highlightDay }) {
   ];
   const weeks = getWeeks(currentYear, currentMonth);
 
+  // Filter out weeks that are completely empty
+  const filteredWeeks = weeks.filter((week) => week.some((day) => day !== ""));
+
   return (
     <Link href="/weeklyCalendarPage" className={styles.calendarLink}>
       <div className={styles.calendarContainer}>
@@ -62,7 +65,7 @@ export default function Calendar({ month, year, highlightDay }) {
             </tr>
           </thead>
           <tbody>
-            {weeks.map((week, i) => (
+            {filteredWeeks.map((week, i) => (
               <tr key={i}>
                 {week.map((date, j) => (
                   <td key={j} className={date ? styles.day : styles.empty}>

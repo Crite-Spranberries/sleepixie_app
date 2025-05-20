@@ -52,17 +52,19 @@
 }
 
 .highlight {
-  width: 90px; /* 100% / 7 days */
-  height: 222px;
   display: inline-flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffcb3e;
+  color: #393939;
+  font-weight: 500;
   font-size: 25px;
-  font-weight: 100;
-  font-weight: 600;
-  font-size: 32px;
-  color: #ffcb3e;
-  padding: 7px 0 0 13px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .day {
