@@ -7,6 +7,7 @@ import Calendar from "@/components/feature/WeeklyCalendar";
 import ThreeButton from "@/components/ui/ThreeButton";
 import { useRouter } from "next/navigation";
 import styles from "@/styles/SupplementPage.module.css";
+import PageHeaderComponent from "@/components/ui/PageHeaderComponent";
 
 export default function AchievementPage() {
   const router = useRouter();
@@ -20,25 +21,22 @@ export default function AchievementPage() {
           height: "100%",
         }}
       >
-        <h3 className="weeklyAchievement">Weekly Achievement</h3>
+        <PageHeaderComponent pageName="Achievements" pageLink="/" />
         <div className="characterContainerProgress">
-          <span
+          <Image
             onClick={() => {
               console.log("clicked");
               router.push("/character");
             }}
             style={{ cursor: "pointer", display: "inline-block" }}
-          >
-            <Image
-              className="character"
-              src="/images/character.png"
-              alt="character"
-              width={370}
-              height={310}
-            />
-          </span>
+            className="character"
+            src="/images/character.png"
+            alt="character"
+            width={370}
+            height={310}
+          />
         </div>
-        <h3 className="myGoal">My Goal</h3>
+        <PageHeaderComponent pageName="My Goal" />
         <div className="myGoalContainer">
           <Image
             src="/icons/BedProgress.svg"
@@ -74,17 +72,18 @@ export default function AchievementPage() {
             />
           </span>
         </div>
-        <span
-          onClick={() => {
-            console.log("clicked");
-            router.push("/weeklyCalendarPage");
-          }}
-          style={{ cursor: "pointer", display: "inline-block" }}
-        >
-          <div className="calendar">
-            <Calendar month={2} year={2025} highlightDay={3} />
-          </div>
-        </span>
+        <div className="calendar">
+          <Calendar
+            onClick={() => {
+              console.log("clicked");
+              router.push("/weeklyCalendarPage");
+            }}
+            style={{ cursor: "pointer", display: "inline-block" }}
+            month={2}
+            year={2025}
+            highlightDay={3}
+          />
+        </div>
       </main>
 
       <nav className={styles.navigationBarGlobal}>

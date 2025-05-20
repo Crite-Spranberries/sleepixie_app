@@ -25,13 +25,13 @@ export default function GoalSettingPage() {
           <HeaderComponent pageName="Goal Setting" pageLink="/" />
         </div>
         <div className="buttonContainer">
-          <p className="sleep">Sleep</p>
+          <p className="settingLabels">Sleep</p>
           <div>
             <PageButton label="Bedtime Setting" />
           </div>
         </div>
         <div className="buttonContainer">
-          <p className="additional">Additional</p>
+          <p className="settingLabels">Additional</p>
           <div>
             <TwoButton
               label1="Supplements Setting"
