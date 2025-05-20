@@ -1,12 +1,12 @@
 import styles from "./CharacterCard.module.css";
 import Image from "next/image";
 
-const CharacterCard2 = ({ video }) => {
+const CharacterCard2 = () => {
   return (
     <div className={styles.characterCard2}>
       <div className={styles.characterVideo2}>
         <video
-          src={video}
+          src="/Level1Video.mp4"
           autoPlay
           muted
           loop

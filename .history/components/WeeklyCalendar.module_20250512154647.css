@@ -1,0 +1,61 @@
+.calendarContainer {
+  background: #393939;
+  border-radius: 12px 12px 0 0;
+  width: 678px;
+  color: #fff9ec;
+  font-family: 'Teachers', sans-serif;
+  border: 1px solid #393939;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: 400;
+  color: #ffcb3e;
+  padding: 16px 0 8px 16px;
+  border-bottom: 2px solid #fff9ec;
+  text-align: left;
+}
+
+.calendarTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: none;
+}
+
+.calendarTable td {
+  width: 14.28%; /* 100% / 7 days */
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 32px;
+  border-right: 1px solid #fff9ec;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  background: none;
+  color: #fff9ec;
+  position: relative;
+}
+
+.calendarTable td:last-child {
+  border-right: none;
+}
+
+.highlight {
+  background: #ffcb3e;
+  color: #393939;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 32px;
+}
+.day {
+  font-weight: 400;
+}

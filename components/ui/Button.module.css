@@ -300,3 +300,16 @@
   /* button shadow */
   box-shadow: 1px 1px 3.1px 0px #ffcb3e;
 }
+
+.primaryButton {
+  width: 350px;
+  height: 55px;
+  background-color: #80a7ff;
+  color: #191b21;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  font-size: 18px;
+  border-radius: 30px;
+  margin: 35px 26px 0 26px;
+}
