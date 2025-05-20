@@ -52,6 +52,15 @@ export default function Calendar({ month, year, highlightDay }) {
         <div className={styles.calendarHeader}>Calendar</div>
         <div className={styles.calendarMonth}>{monthNames[currentMonth]}</div>
         <table className={styles.calendarTable}>
+          <thead>
+            <tr>
+              {["", "", "", "", "", "", ""].map((day, idx) => (
+                <th key={idx} className={styles.calendarTableHeader}>
+                  {day}
+                </th>
+              ))}
+            </tr>
+          </thead>
           <tbody>
             {weeks.map((week, i) => (
               <tr key={i}>
