@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import NavigationBar from "@/components/Button/NavigationBar";
+import NavigationBar from "@/components/layout/NavigationBar";
 import Link from "next/link";
-import HeaderComponent from "@/components/Button/HeaderComponent";
-import Calendar from "@/components/Calendar";
-import ThreeButton from "@/components/Button/ThreeButton";
+import HeaderComponent from "@/components/ui/HeaderComponent";
+import Calendar from "@/components/feature/WeeklyCalendar";
+import ThreeButton from "@/components/ui/ThreeButton";
 import { useRouter } from "next/navigation";
 
 export default function AchievementPage() {

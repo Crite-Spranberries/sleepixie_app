@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './WeeklyCalendar.module.css';
+import React from "react";
+import styles from "./WeeklyCalendar.module.css";
 
 export default function WeeklyCalendar({
-  month = 'March',
+  month = "March",
   days = [3, 4, 5, 6, 7, 8, 9],
   highlightDay = 3,
 }) {

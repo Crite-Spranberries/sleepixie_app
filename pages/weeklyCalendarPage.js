@@ -1,10 +1,10 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import NavigationBar from '@/components/Button/NavigationBar';
-import HeaderComponent from '@/components/Button/HeaderComponent';
-import WeeklyCalendar from '@/components/WeeklyCalendar';
-import Image from 'next/image';
+"use client";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import NavigationBar from "@/components/layout/NavigationBar";
+import HeaderComponent from "@/components/ui/HeaderComponent";
+import WeeklyCalendar from "@/components/feature/WeeklyCalendar";
+import Image from "next/image";
 
 export default function WeeklyCalendarPage() {
   const router = useRouter();

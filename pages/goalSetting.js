@@ -1,11 +1,11 @@
-import PageButton from '@/components/Button/PageButton';
-import TwoButton from '@/components/Button/TwoButton';
-import Image from 'next/image';
-import NavigationBar from '@/components/Button/NavigationBar';
-import Link from 'next/link';
-import HeaderComponent from '@/components/Button/HeaderComponent';
-import SmallPrimButton from '@/components/Button/SmallPrimButton';
-import SmallSecondButton from '@/components/Button/SmallSecondButton';
+import PageButton from "@/components/ui/PageButton";
+import TwoButton from "@/components/ui/TwoButton";
+import Image from "next/image";
+import NavigationBar from "@/components/layout/NavigationBar";
+import Link from "next/link";
+import HeaderComponent from "@/components/ui/HeaderComponent";
+import SmallPrimButton from "@/components/ui/SmallPrimButton";
+import SmallSecondButton from "@/components/ui/SmallSecondButton";
 
 export default function GoalSettingPage() {
   return (
