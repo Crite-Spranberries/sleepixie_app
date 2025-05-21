@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.textContainer {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #d3d3d3;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}

@@ -47,14 +47,14 @@
 
 .label {
     font-size: 0.8rem;
-    color: #d3d3d3;
+    color: #191b21;
     margin-top: 0.2rem;
 }
 
 .time {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #d3d3d3;
+    color: #fff;
 }
 
 .editRow {
@@ -65,14 +65,25 @@
     cursor: pointer;
 }
 
+.editIcon {
+    margin-right: 0.3rem;
+}
+
 .editText {
     text-decoration: underline;
+}
+
+.bedIcon,
+.wakeIcon {
+    font-size: 2rem;
+    background: #ffcb3e;
+    border-radius: 1.5rem;
+    padding: 0.3rem;
 }
 
 .recommendation {
     color: #d3d3d3;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     margin-top: 1rem;
 }
-

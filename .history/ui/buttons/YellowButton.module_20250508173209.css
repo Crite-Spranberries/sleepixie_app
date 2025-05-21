@@ -1,0 +1,7 @@
+.buttonContainer {
+    width: 255px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #ffd900;
+    text-align: center;
+}

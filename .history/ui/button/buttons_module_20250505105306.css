@@ -1,0 +1,11 @@
+/* width: 350px;
+height: 55px;
+flex-shrink: 0; */
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+}

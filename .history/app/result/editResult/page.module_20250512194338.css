@@ -3,8 +3,12 @@
     cursor: pointer;
 }
 
+.cancel {
+    color: #ffcb3e;
+}
+
 .screen {
-    background: #353535;
+    background: #444;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,15 +21,15 @@
     display: flex;
     justify-content: space-between;
     color: #d3d3d3;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
 .card {
-    background: #191b21;
-    border-radius: 30px;
-    width: 400;
-    padding: 1.5rem 1rem 4rem 1rem;
+    background: #5a5a5a;
+    border-radius: 20px;
+    width: 350px;
+    padding: 1.5rem 1rem 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +49,11 @@
     flex: 1;
 }
 
+.icon {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+}
+
 .label {
     font-size: 0.8rem;
     color: #d3d3d3;
@@ -52,9 +61,9 @@
 }
 
 .time {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #d3d3d3;
+    color: #fff;
 }
 
 .editRow {
@@ -65,14 +74,25 @@
     cursor: pointer;
 }
 
+.editIcon {
+    margin-right: 0.3rem;
+}
+
 .editText {
     text-decoration: underline;
+}
+
+.bedIcon,
+.wakeIcon {
+    font-size: 2rem;
+    background: #ffcb3e;
+    border-radius: 1.5rem;
+    padding: 0.3rem;
 }
 
 .recommendation {
     color: #d3d3d3;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     margin-top: 1rem;
 }
-

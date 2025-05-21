@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Teachers:wght@400;500;600;700&display=swap");
+
+:root {
+    --font-teachers: "Teachers", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--font-teachers);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    background: var(--night-dark-background, #191b21);
+    min-height: 100vh;
+}
