@@ -27,7 +27,7 @@ export default function GoalSettingPage() {
         <div className="buttonContainer">
           <p className="settingLabels">Sleep</p>
           <div>
-            <PageButton label="Bedtime Setting" />
+            <PageButton label="Bedtime Setting" disabled={true} />
           </div>
         </div>
         <div className="buttonContainer">

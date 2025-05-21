@@ -37,9 +37,9 @@ const SupplementCard = ({
         <div className={styles.cardContent}>
           <h3 className={styles.cardTitle}>{name}</h3>
           <p className={styles.cardFrequency}>
-            {selected.frequency} times per day
+            {selected.frequency} time(s) per day
             {selected.days && <>, {getDaySummary(selected.days)}</>}
-            {selected.usageCount && <>, {selected.usageCount} usage</>}
+            {selected.usageCount && <>, {selected.usageCount} usage(s)</>}
             {selected.time && <>, at {selected.time}</>}
           </p>
         </div>

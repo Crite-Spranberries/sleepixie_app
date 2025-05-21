@@ -313,3 +313,10 @@
   border-radius: 30px;
   margin: 35px 26px 0 26px;
 }
+
+.disabledButton {
+  background-color: #1e2026 !important;
+  color: #888 !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
