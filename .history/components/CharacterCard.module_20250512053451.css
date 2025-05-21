@@ -1,0 +1,50 @@
+.characterCard {
+  width: 370px;
+  height: 479px;
+  background-color: #292e37;
+}
+
+.characterLevelBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.levelNumber {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
+.characterLevel {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px 0 10px;
+  justify-content: space-between;
+}
+
+.levelGoalTitle {
+  color: #e8e8e8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.levelGoalText {
+  color: #e8e8e8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.levelBar {
+  width: 281px;
+  height: 18px;
+  flex-shrink: 0;
+}

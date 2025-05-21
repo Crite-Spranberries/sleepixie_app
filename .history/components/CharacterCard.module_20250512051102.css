@@ -1,0 +1,15 @@
+.characterCard {
+  width: 370px;
+  height: 479px;
+  background-color: #292e37;
+}
+
+.chracterVideo {
+  border-radius: 29px;
+}
+
+.levelBar {
+  width: 281px;
+  height: 18px;
+  flex-shrink: 0;
+}

@@ -1,7 +1,0 @@
-import styles from '@/components/Button/PageButton.module.css';
-
-const Button = ({ label }) => {
-  return <button className={styles.pageButton}>{label}</button>;
-};
-
-export default Button;

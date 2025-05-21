@@ -1,4 +1,6 @@
-import '../styles/globals.css';
+"use client";
+
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (

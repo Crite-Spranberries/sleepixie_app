@@ -1,0 +1,52 @@
+.supplementList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.loading,
+.error,
+.noResults {
+  text-align: center;
+  color: #fff9ec;
+  padding: 20px;
+  font-family: Teachers;
+  font-size: 16px;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.noResults {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.noResults p {
+  margin: 0;
+}
+
+.noResultsSubtext {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Add responsive styles for larger screens */
+@media (min-width: 768px) {
+  .supplementList {
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}

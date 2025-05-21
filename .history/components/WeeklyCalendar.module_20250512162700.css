@@ -1,0 +1,83 @@
+.calendarScrollWrapper {
+  width: 100vw; /* or a fixed width for mobile, e.g. 390px */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #393939;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin: 11px 0 0 16px;
+}
+
+.calendarContainer {
+  min-width: 678px; /* or however wide your table needs to be */
+  height: 287px;
+  color: #fff9ec;
+  margin: 0;
+  background: none;
+  border-radius: 12px 12px 0 0;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: 400;
+  color: #ffcb3e;
+  padding: 16px 0 16px 16px;
+  border-bottom: 2px solid #fff9ec;
+  text-align: left;
+}
+
+.calendarTable {
+  width: 100%;
+  min-width: 678px; /* match .calendarContainer */
+  border-collapse: separate;
+  border-spacing: 0;
+  background: none;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.calendarTable td {
+  width: 14.28%; /* 100% / 7 days */
+  height: 220px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 32px;
+  border-right: 1px solid #fff9ec;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  background: none;
+  color: #fff9ec;
+  position: relative;
+}
+
+.highlight {
+  width: 14.28%; /* 100% / 7 days */
+  height: 222px;
+  background: #ffcb3e;
+  display: inline-flex;
+  align-items: left;
+  justify-content: left;
+  font-size: 25px;
+  font-weight: 100;
+  margin: 0;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 32px;
+}
+.day {
+  display: inline-flex;
+  align-items: left;
+  justify-content: left;
+  font-size: 25px;
+  padding: 7px 0 0 13px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.calendarScrollWrapper::-webkit-scrollbar {
+  display: none;
+}

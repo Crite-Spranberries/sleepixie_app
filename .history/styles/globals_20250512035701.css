@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Add any global styles below */
+h4 {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+html {
+  font-family: 'Teachers', sans-serif;
+  background-color: #191b21;
+  color: #e8e8e8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 800px;
+}
+
+input {
+  color: #ffcb3e;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+}
+
+input::placeholder {
+  color: #ffcb3e;
+  opacity: 0.5;
+}
+
+.buttonContainer {
+  width: 100%;
+  padding: 0;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationBarGlobal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #292e37;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.supplementList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid #fff9ec;
+}
+
+td {
+  border: 1px solid #fff9ec;
+}

@@ -1,0 +1,85 @@
+.mobileContainer {
+  width: 402px;
+  height: 874px;
+  min-height: 874px;
+  max-width: 402px;
+  margin: 0 auto;
+  background: #191b21;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  /* Simulate device pixel ratio of 3 for iPhone 16 Pro (visual only) */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.settingHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.buttonContainer {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigationBarGlobal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #191b21;
+  padding: 20px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  height: 100%;
+  box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.mainContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 370px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.supplementList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+/* Add responsive styles for larger screens */
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 40px;
+  }
+}
