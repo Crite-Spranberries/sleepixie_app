@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import NavigationBar from "@/components/layout/NavigationBar";
 import Link from "next/link";

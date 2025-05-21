@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import CharacterCard from "@/components/feature/CharacterCard";
 import PrimaryButton from "@/components/ui/PrimaryButton";

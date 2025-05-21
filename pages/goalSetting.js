@@ -1,3 +1,5 @@
+"use client";
+
 import PageButton from "@/components/ui/PageButton";
 import TwoButton from "@/components/ui/TwoButton";
 import Image from "next/image";
