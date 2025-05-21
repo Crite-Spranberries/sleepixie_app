@@ -20,7 +20,13 @@ const NavigationBar = ({
   return (
     <div className={styles.navigationBar}>
       <div className={styles.navigationBarSleep}>
-        <Image src={sleepIcon} alt="arrow-left" width={25} height={25} />
+        <Image
+          src={sleepIcon}
+          alt="arrow-left"
+          width={25}
+          height={25}
+          style={{ width: 25, height: 25 }}
+        />
         <Link
           href="/"
           className={`${styles.pageName} ${isActive("/") ? styles.active : ""}`}
@@ -29,7 +35,13 @@ const NavigationBar = ({
         </Link>
       </div>
       <div className={styles.navigationBarAchievement}>
-        <Image src={achievementIcon} alt="arrow-left" width={25} height={25} />
+        <Image
+          src={achievementIcon}
+          alt="arrow-left"
+          width={25}
+          height={25}
+          style={{ width: 25, height: 25 }}
+        />
         <Link
           href="/achievements"
           className={`${styles.pageName2} ${
@@ -40,7 +52,13 @@ const NavigationBar = ({
         </Link>
       </div>
       <div className={styles.navigationBarProfile}>
-        <Image src={profileIcon} alt="arrow-left" width={25} height={25} />
+        <Image
+          src={profileIcon}
+          alt="arrow-left"
+          width={25}
+          height={25}
+          style={{ width: 25, height: 25 }}
+        />
         <Link
           href="/profilePage"
           className={`${styles.pageName3} ${

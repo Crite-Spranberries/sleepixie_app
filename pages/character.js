@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import CharacterCard from "@/components/feature/CharacterCard";
-import PrimaryButton from "@/components/ui/PrimaryButton";
+import PrimaryButton from "@/components/ui/Button";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import styles from "@/styles/SupplementPage.module.css";
 import NavigationBar from "@/components/layout/NavigationBar";

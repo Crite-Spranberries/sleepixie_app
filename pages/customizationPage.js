@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import PrimaryButton from "@/components/ui/PrimaryButton";
+import PrimaryButton from "@/components/ui/Button";
 import CharacterCard2 from "@/components/feature/CharacterCard2";
 import HeaderComponent from "@/components/ui/HeaderComponent";
 import styles from "@/styles/SupplementPage.module.css";

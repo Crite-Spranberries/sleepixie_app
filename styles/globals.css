@@ -217,7 +217,7 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 16px 38px 16px 0;
+  margin: 0 38px 0 0;
 }
 
 .progressIcons {

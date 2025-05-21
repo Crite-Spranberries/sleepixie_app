@@ -33,6 +33,7 @@ export default function TimeRing() {
         height={325}
         className={styles.timeRingImage}
         priority
+        style={{ width: "100%", height: "auto" }}
       />
       <div className={styles.timeRingCenter}>
         <div className={styles.timezone}>{timezone}</div>

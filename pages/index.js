@@ -10,11 +10,61 @@ import { useRouter } from "next/navigation";
 import styles from "@/styles/SupplementPage.module.css";
 import TimeRing from "@/components/feature/TimeRing";
 import "@/styles/globals.css";
+import PrimaryButton from "@/components/ui/Button";
+import SleepSessionModal from "@/components/feature/SleepSessionModal";
+import SleepReviewModal from "@/components/feature/SleepReviewModal";
+import { useState } from "react";
 
 export default function AchievementPage() {
   const router = useRouter();
+  const [showSleepModal, setShowSleepModal] = useState(false);
+  const [showReviewModal, setShowReviewModal] = useState(false);
+  const [sleepStart, setSleepStart] = useState(null);
+  const [sleepEnd, setSleepEnd] = useState(null);
+
+  // Handler for Sleep now button
+  const handleSleepNow = () => {
+    setSleepStart(Date.now());
+    setShowSleepModal(true);
+  };
+
+  // Handler for Cancel in modal
+  const handleCancelSleep = () => {
+    setShowSleepModal(false);
+    alert("User skipped sleep session, no data updated.");
+  };
+
+  // Handler for I am up!
+  const handleFinishSleep = () => {
+    setSleepEnd(Date.now());
+    setShowSleepModal(false);
+    setShowReviewModal(true);
+  };
+
+  // Handler for closing review modal
+  const handleCloseReview = () => {
+    alert(
+      "This would ideally log the performance data in the sleep streak display."
+    );
+    setShowReviewModal(false);
+  };
+
   return (
     <div className={styles.mobileContainer}>
+      {/* Sleep Session Modal */}
+      <SleepSessionModal
+        open={showSleepModal}
+        onCancel={handleCancelSleep}
+        onFinish={handleFinishSleep}
+        startTime={sleepStart}
+      />
+      {/* Sleep Review Modal */}
+      <SleepReviewModal
+        open={showReviewModal}
+        onClose={handleCloseReview}
+        startTime={sleepStart ? new Date(sleepStart) : new Date()}
+        endTime={sleepEnd ? new Date(sleepEnd) : new Date()}
+      />
       {/* Scrollable main content area */}
       <main
         className="mainContainer"
@@ -27,7 +77,7 @@ export default function AchievementPage() {
         {/* Greeting */}
         <div className="greeting">
           <span>
-            Hello, <b>Jane</b>!
+            Hello, <b>there</b>!
           </span>
           <br />
           <span className="greetingSub">
@@ -46,12 +96,16 @@ export default function AchievementPage() {
               alt="Progress Icons"
               width={80}
               height={300}
-              style={{ width: "180%", height: "auto" }}
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>
         {/* Sleep Now Button */}
-        <button className="sleepNowButton">Sleep now</button>
+        <PrimaryButton
+          label="Sleep now"
+          variant="secondary"
+          onClick={handleSleepNow}
+        />
         {/* Sleep Streak Rings */}
         <div className="streakRings" style={{ width: 350 }}>
           <Image

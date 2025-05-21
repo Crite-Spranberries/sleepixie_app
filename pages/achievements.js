@@ -57,21 +57,18 @@ export default function AchievementPage() {
             width={70}
             height={70}
           />
-          <span
+          <Image
+            src="/icons/GoalAdd.svg"
+            alt="goalAdd"
+            width={70}
+            height={70}
             onClick={() => {
               console.log("clicked");
               router.push("/goalSetting");
             }}
             className="goalAdd"
             style={{ cursor: "pointer", display: "inline-block" }}
-          >
-            <Image
-              src="/icons/GoalAdd.svg"
-              alt="goalAdd"
-              width={70}
-              height={70}
-            />
-          </span>
+          />
         </div>
         <div className="calendar">
           <Calendar
