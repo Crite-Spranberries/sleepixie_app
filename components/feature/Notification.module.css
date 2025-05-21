@@ -1,15 +1,22 @@
 .notificationContainer {
   width: 370px;
-  height: 234px;
+  min-height: 234px;
   background-color: #292e37;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 24px 24px 24px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .notificationTitle {
   font-size: 32px;
   font-style: normal;
   font-weight: 100;
-  line-height: 29px; /* 90.625% */
+  line-height: 20px; /* 90.625% */
   text-align: center;
   margin: 36px 0 0 0;
 }
@@ -26,5 +33,6 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
-  margin: 0 16;
+  margin: 0 16px;
+  gap: 16px;
 }

@@ -18,7 +18,7 @@ export default function CharacterPage() {
           height: "100%",
         }}
       >
-        <HeaderComponent pageName="Achievement" pageLink="/achievements" />
+        <HeaderComponent pageName="Achievements" pageLink="/achievements" />
         <CharacterCard
           LevelGoal="Sleep for at least 7 hours for a month"
           level1="/icons/SelectedLevel1.svg"
@@ -26,8 +26,8 @@ export default function CharacterPage() {
           level3="/icons/Level3.svg"
         />
         <PrimaryButton
-          label="Customizing/Color"
-          onClick={() => router.push("/customizing")}
+          label="Customization"
+          onClick={() => router.push("/customizationPage")}
         />
       </main>
 

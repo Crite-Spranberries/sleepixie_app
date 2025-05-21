@@ -7,11 +7,59 @@ import WeeklyCalendar from "@/components/feature/WeeklyCalendar";
 import styles from "@/styles/SupplementPage.module.css";
 import Image from "next/image";
 import Calendar from "@/components/feature/WeeklyCalendar";
+import { useState, useEffect } from "react";
+import Notification from "@/components/feature/Notification";
 
 export default function WeeklyCalendarPage() {
   const router = useRouter();
+  // State for showing notification
+  const [showNotification, setShowNotification] = useState(false);
+
+  // Show notification after 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setShowNotification(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handler to close notification
+  const handleCloseNotification = () => setShowNotification(false);
+
   return (
     <div className={styles.mobileContainer}>
+      {/* Overlay and Notification */}
+      {showNotification && (
+        <>
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100vw",
+              height: "100vh",
+              background: "rgba(0,0,0,0.5)",
+              zIndex: 1000,
+            }}
+            onClick={handleCloseNotification}
+          />
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100vw",
+              height: "100vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 1001,
+            }}
+          >
+            <div onClick={(e) => e.stopPropagation()}>
+              <Notification onClose={handleCloseNotification} />
+            </div>
+          </div>
+        </>
+      )}
       {/* Scrollable main content area */}
       <main
         className="mainContainer"
@@ -21,7 +69,7 @@ export default function WeeklyCalendarPage() {
           height: "100%",
         }}
       >
-        <HeaderComponent pageName="Weekly Calendar" pageLink="/" />
+        <HeaderComponent pageName="Weekly Calendar" pageLink="/achievements" />
         <WeeklyCalendar />
         <div className="calendar">
           <Calendar month={2} year={2025} highlightDay={3} />

@@ -18,7 +18,10 @@ export default function CustomizingPage() {
           height: "100%",
         }}
       >
-        <HeaderComponent pageName="Customizing/Themes" pageLink="/character" />
+        <HeaderComponent
+          pageName="Mascot Customization"
+          pageLink="/character"
+        />
         <CharacterCard2 />
         <div>
           <p className="colorTheme">Color Theme</p>

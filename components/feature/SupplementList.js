@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import SupplementCard from "./SupplementCard";
 import SupplementModal from "./SupplementModal";
-import SelectedSupplementCard from "./SelectedSupplementCard";
 import styles from "./SupplementList.module.css";
 
-// Handles loading, searching, and displaying supplement cards
-const SupplementList = ({ searchQuery = "" }) => {
+// SupplementList handles loading, searching, and displaying supplement cards
+const SupplementList = ({ searchQuery }) => {
+  // Supplement data and loading/error state
   const [supplements, setSupplements] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Modal state
-  const [modalOpen, setModalOpen] = useState(false);
+  // Modal state: selectedSupplement is null if modal is closed
   const [selectedSupplement, setSelectedSupplement] = useState(null);
+  // Track user-selected supplements
   const [selectedSupplements, setSelectedSupplements] = useState({});
 
   // Load supplements from JSON on mount
@@ -34,21 +34,20 @@ const SupplementList = ({ searchQuery = "" }) => {
   }, []);
 
   // Open modal for a supplement
-  const openModal = (supplement) => {
-    setSelectedSupplement(supplement);
-    setModalOpen(true);
-  };
+  const openModal = (supplement) => setSelectedSupplement(supplement);
+  // Close modal
+  const handleModalClose = () => setSelectedSupplement(null);
 
-  // Save selected supplement data
+  // Save selected supplement data from modal
   const handleModalSave = (modalData) => {
     setSelectedSupplements((prev) => ({
       ...prev,
       [selectedSupplement.id]: { ...selectedSupplement, ...modalData },
     }));
-    setModalOpen(false);
+    setSelectedSupplement(null);
   };
 
-  // Remove selected supplement
+  // Remove a selected supplement
   const handleRemove = (id) => {
     setSelectedSupplements((prev) => {
       const copy = { ...prev };
@@ -57,23 +56,20 @@ const SupplementList = ({ searchQuery = "" }) => {
     });
   };
 
-  // Close modal
-  const handleModalClose = () => setModalOpen(false);
-
-  // Filter supplements by search
+  // Filter supplements by search query
   const filtered = supplements.filter((s) =>
     s.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Handle different states with early returns
+  // Loading state
   if (loading) {
     return <div className={styles.loading}>Loading supplements...</div>;
   }
-
+  // Error state
   if (error) {
     return <div className={styles.error}>Error: {error}</div>;
   }
-
+  // No results state
   if (searchQuery && filtered.length === 0) {
     return (
       <div className={styles.noResults}>
@@ -85,36 +81,31 @@ const SupplementList = ({ searchQuery = "" }) => {
     );
   }
 
+  // Main supplement list rendering
   return (
     <>
       <div className={styles.supplementList}>
         {filtered.map((supplement) => {
           const selected = selectedSupplements[supplement.id];
-          return selected ? (
-            <SelectedSupplementCard
-              key={supplement.id}
-              name={supplement.name}
-              image={supplement.image}
-              frequency={selected.frequency}
-              usageCount={selected.usageCount}
-              time={selected.time}
-              days={selected.selectedDays}
-              onRemove={() => handleRemove(supplement.id)}
-            />
-          ) : (
+          return (
             <SupplementCard
               key={supplement.id}
               name={supplement.name}
               image={supplement.image}
               frequency={supplement.frequency}
+              selected={selected}
               onAdd={() => openModal(supplement)}
+              onRemove={
+                selected ? () => handleRemove(supplement.id) : undefined
+              }
             />
           );
         })}
       </div>
-      {modalOpen && selectedSupplement && (
+      {/* Modal for supplement details, shown if a supplement is selected */}
+      {selectedSupplement && (
         <SupplementModal
-          open={modalOpen}
+          open={!!selectedSupplement}
           onClose={handleModalClose}
           onSave={handleModalSave}
           title={selectedSupplement.name}

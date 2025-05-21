@@ -24,6 +24,9 @@ const SupplementModal = ({ open, onClose, onSave, title = "Probiotics" }) => {
   };
 
   const handleSave = () => {
+    alert(
+      "This would add a supplement to the achievement calendar page and update as an upcoming event, ideally."
+    );
     onSave({ usageCount, frequency, time, selectedDays, title });
   };
 
