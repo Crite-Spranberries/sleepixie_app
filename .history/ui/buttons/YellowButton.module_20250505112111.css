@@ -1,8 +1,0 @@
-.buttonContainer {
-    position: absolute;
-    top: 0;
-    border: rgb(255, 217, 0);
-    height: 55px;
-    width: 350px;
-    flex-shrink: 0;
-}
