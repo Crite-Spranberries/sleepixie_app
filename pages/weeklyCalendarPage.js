@@ -15,6 +15,10 @@ export default function WeeklyCalendarPage() {
   const router = useRouter();
   // State for showing notification
   const [showNotification, setShowNotification] = useState(false);
+  // State for which time progress image to show
+  const [progressImage, setProgressImage] = useState(
+    "/images/TimeProgress2.png"
+  );
 
   // Show notification after 2 seconds
   useEffect(() => {
@@ -24,6 +28,17 @@ export default function WeeklyCalendarPage() {
 
   // Handler to close notification
   const handleCloseNotification = () => setShowNotification(false);
+
+  // Handler for skip
+  const handleSkip = () => {
+    setProgressImage("/images/TimeProgress4.png");
+    setShowNotification(false);
+  };
+  // Handler for accept
+  const handleAccept = () => {
+    setProgressImage("/images/TimeProgress3.png");
+    setShowNotification(false);
+  };
 
   return (
     <div className={styles.mobileContainer}>
@@ -56,7 +71,7 @@ export default function WeeklyCalendarPage() {
             }}
           >
             <div onClick={(e) => e.stopPropagation()}>
-              <Notification onClose={handleCloseNotification} />
+              <Notification onSkip={handleSkip} onAccept={handleAccept} />
             </div>
           </div>
         </>
@@ -77,7 +92,7 @@ export default function WeeklyCalendarPage() {
         </div>
         <Image
           className="timeProgress"
-          src="/images/TimeProgress1.png"
+          src={progressImage}
           alt="Time Progress"
           width={402}
           height={717}

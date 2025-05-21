@@ -2,20 +2,20 @@ import styles from "./Notification.module.css";
 import SmallPrimButton from "../ui/SmallPrimButton";
 import SmallSecondButton from "../ui/SmallSecondButton";
 
-const Notification = ({ onClose }) => {
+const Notification = ({ onSkip, onAccept }) => {
   // Handler for Skip
   const handleSkip = () => {
     alert(
       '"Skipping" skips the supplement tracking. This would ideally reflect on the day agenda display.'
     );
-    onClose();
+    if (onSkip) onSkip();
   };
   // Handler for Accept
   const handleAccept = () => {
     alert(
       '"Accepting" checks off the user-defined supplement dose time. This would ideally reflect on the day agenda display.'
     );
-    onClose();
+    if (onAccept) onAccept();
   };
   return (
     <div className={styles.notificationContainer}>
